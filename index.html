@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeolian Studios - 创新操作系统与应用开发</title>
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        header {
+            background-color: rgba(10, 25, 47, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 0;
+            backdrop-filter: blur(5px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero 部分 */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent);
+            padding: 12px 28px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary);
+            margin-right: 15px;
+        }
+        
+        .btn-primary:hover {
+            background-color: rgba(100, 255, 218, 0.8);
+        }
+        
+        /* 关于部分 */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: var(--text);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 300px;
+            height: 1px;
+            background-color: var(--text-secondary);
+            margin-top: 10px;
+            opacity: 0.3;
+        }
+        
+        /* 产品部分 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #0f3460;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            color: var(--text);
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Aeolian</div>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#products">产品</a></li>
+                    
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 部分 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>重新定义数字体验</h1>
+                <p>Aeolian 工作室致力于开发创新的操作系统和应用程序，为用户提供无缝、高效的数字体验。我们的技术正在改变人们与设备交互的方式。</p>
+                <a href="#products" class="btn btn-primary">探索产品</a>
+                <a href="#contact" class="btn">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于 Aeolian</h2>
+            <p>成立于2024年，Aeolian 工作室由一群热衷于操作系统开发和应用程序创新的工程师创立。我们的使命是通过前沿技术打造更加人性化的数字体验。</p>
+            <p>我们相信，优秀的软件应该像风一样自然流畅 - 这也是我们命名为"Aeolian"(风的)的初衷。</p>
+        </div>
+    </section>
+
+    <!-- 产品部分 -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">我们的产品</h2>
+            <div class="products-grid">
+                <!-- 产品1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <h3>Daniux</h3>
+                    </div>
+                    <div class="product-info">
+                        <h3>Daniux 操作系统</h3>
+                        <p>轻量级操作系统</p>
+                        <a href="https://github.com/aeoliandust/AE_github.git" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 产品2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <h3>Breeze</h3>
+                    </div>
+                    <div class="product-info">
+                        <h3>X启动器</h3>
+                        <p>一键启动MC</p>
+                        <a href="https://github.com/aeoliandust/AE_github.git" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 产品3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <h3>Zephyr</h3>
+                    </div>
+                    <div class="product-info">
+                        <h3>常用网站</h3>
+                        <p>包含目前市面上经常使用的网站</p>
+                        <a href="https://github.com/aeoliandust/AE_github.git" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <p>有兴趣了解我们的产品或探讨合作机会？请随时联系我们。</p>
+            <h3>邮箱:3454460759@qq.com</h3>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/aeoliandust/AE_github.git">GitHub</a>
+
+            </div>
+            <p class="copyright">© 2023 Aeolian Studios. 保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>
